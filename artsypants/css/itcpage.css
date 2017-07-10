@@ -1,0 +1,109 @@
+/* GLOBAL RULES FOR DINER */
+
+html {
+    background-color: cornflowerblue;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 0 1em;
+}
+
+/* responsive code for iframes */
+
+.embed-container{
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+.embed-container iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* end of responsive code for iframe */
+
+figure{
+    display: inline-block;
+    width: 32%;
+    margin: 0;
+}
+
+figure img{
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    }
+
+/* DESKTOP */
+@media all and (min-width:1280px){
+
+    section {
+        float: left;
+        width: 66%;       
+    }
+    
+    aside{
+        float: right;
+        width: 32%;      
+    }
+}
+
+/* TABLET */
+@media all and (min-width:481px) and (max-width:1279px){
+    body {
+        width: 90%;
+    }
+    
+    section {
+        float: left;
+        width: 60%;       
+    }
+    
+    aside{
+        float: right;
+        width: 38%;      
+    }
+}
+
+/* PHONE */
+@media all and (max-width:480px){
+    body {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
