@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+ <html>
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Artsypants </title>
+    
+    <!-- fonts from https://fonts.google.com-->
+     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    
+    <!-- styles-->
+     <link rel="stylesheet" href="css/blueberry.css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+    <link href="css/sstyles.css" rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" href="css/nav.css" />-->
+    
+     
+      <!-- javascript liabrary from https://developers.google.com-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src= "js/script.js"></script>
+      
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </head>
+    
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+     <script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+
+
+    
+ 
+     <body>
+          <!-- go to the url https://webdesign.tutsplus.com/articles/super-simple-lightbox-with-css-and-jquery--webdesign-3528-->
+         
+ 
+         <!--begin header-->
+ 
+         <header>
+ 
+             <div class="masthead" role="banner">
+
+                 <h1 class="display-3">Kerstin Graudins</h1>
+ 
+             </div>
+ 
+         </header>
+ 
+         <!--end header-->     
+ 
+         <!--begin nav bar-->
+
+         <nav>
+
+             <a id="mobile-only">
+
+                 <img src="images/Hamburger.png" id="burger"/>
+ 
+                 <img src="images/X-Icon.png" id="ex" class="hidden" />
+
+                 MENU
+
+             </a>
+ 
+             <ul id="nav">
+ 
+                 <li>
+
+                     <a href="apindex.html">Home</a>
+ 
+                 </li>
+
+                 <li class="dropdown">
+ 
+                     <a href="" class="expand">Portfolio</a>
+
+                     <ul id="sub-menu" class="dropdown-content">
+ 
+                         <li>
+
+                             <a href="paintings2.html">Painting</a>
+ 
+                         </li>
+ 
+                         <li>
+ 
+                             <a href="prints.html">Prints</a>
+
+                         </li>
+ 
+                         <li>
+
+                             <a href="drawings.html">Drawing</a>
+
+                         </li>
+
+                         <li>
+ 
+                             <a href="sculptures.html">Sculpture</a>
+ 
+                         </li>
+ 
+                     </ul>
+ 
+                 </li>
+ 
+                 <li>
+ 
+                     <a href="contact.html">Contact</a>
+ 
+                 </li>
+ 
+             </ul>
+ 
+         </nav>
+<!--         <div id="portfolio">-->
+    
+    <!-- this puts lines up the pictures horizontally --> 
+    <div id="gallery">
+<!--
+    <ul>
+	<li>
+-->
+<!--
+        <div class="col-sm-12">
+        <div class="col-md-6">
+-->
+       
+      <a class="example-image-link" href="images/chocolatecystp03.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="images/chocolatecystpthumb.jpg" alt=""/></a>
+        
+        
+<!--
+        </div>
+        </div>
+	 
+-->
+<!--
+	  <div class="col-sm-12">
+        <div class="col-md-6">
+-->
+	 
+      <a class="example-image-link" href="images/bunny.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="images/bunnythumb.jpg" alt="" /></a>
+         
+	
+<!--
+	   </div>
+       </div>
+        
+        <div class="col-sm-12">
+        <div class="col-md-6">
+-->
+	 
+      <a class="example-image-link" href="images/czechskull99.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="images/czechskull99thumb.jpg" alt="" /></a>
+       
+	  
+<!--
+	   </div>
+       </div>
+        
+         <div class="col-sm-12">
+         <div class="col-md-6">
+-->
+        
+	
+      <a class="example-image-link" href="images/fish01.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/fish01thumb.jpg" alt="" /></a>
+     
+             
+<!--
+       </div>
+       </div>
+-->
+	  
+	 
+	    
+	   <a class="example-image-link" href="images/sheet97.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/sheet97thumb.jpg" alt="" /></a>
+       
+        
+	 
+	 
+	    <div>
+	    <a class="example-image-link" href="images/skull00.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="images/skull00thumb.jpg" alt="" /></a>
+    
+        </div>
+         </div>
+		
+		 
+<!--
+		  </ul>
+		  </div>
+-->
+      
+
+    <!-- START LEFT COLUMN -->
+       
+    <!-- END RIGHT COLUMN -->
+         <footer>
+   <small>
+   &copy; 2017, All Rights Reserved ~ Authored by Sherrod Ware ~ <a href="disclaimer.html">Disclaimer</a>~
+   <a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~  
+   <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
+   </small>
+</footer>
+        <script src="js/lightbox2.js"></script>
+        <script  src="js/lightbox-plus-jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+       
+        </body>
+
+
+</html>
+         
