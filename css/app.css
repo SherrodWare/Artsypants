@@ -18,7 +18,9 @@ header{
 .masthead{
    font-family: 'New Rocker', cursive;
 }
-
+.top-buffer{
+    margin-top: 20px;
+}
 .main-container {
   width: 100%;
   max-width: 1200px;
