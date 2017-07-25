@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+     <title>Artsypants </title>
+  
+<!-- fonts from https://fonts.google.com-->
+    <link href="https://fonts.googleapis.com/css?family=Diplomata|New+Rocker|Suez+One" rel="stylesheet">
+<!-- styles-->
+     <link rel="stylesheet" href="css/app.css" type="text/css"/>
+     
+<!-- javascript liabrary from https://developers.google.com-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src= "js/script.js"></script>
+<!-- ekko lightbox stuff-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css"/>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.js"></script>
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+ </head>
+     <header>
+         <div class="masthead" role="banner">
+            <h1 class="display-3">Kerstin Graudins</h1>
+         </div>
+     </header>
+     <!--end header-->  
+    <!--lightbox code-->
+   <link rel="stylesheet" href="css/lightbox.min.css" />
+     <script>
+//        this allows you to click through the pictures in lightbox
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+
+    
+ <body>
+<!--begin header-->
+     <header>
+         <div class="masthead" role="banner">
+           
+         </div>
+     </header>
+<!--end header-->     
+<!--begin nav bar-->
+      <nav>
+        <a id="mobile-only">
+            <img src="images/Hamburger.png" id="burger"/>
+            <img src="images/X-Icon.png" id="ex" class="hidden" />
+            MENU
+        </a>
+        <ul id="nav">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="" class="expand">Portfolio</a>
+                <ul id="sub-menu" class="dropdown-content">
+                    <li>
+                        <a href="paintings3.html">Painting</a>
+                    </li>
+                    <li>
+                        <a href="">Prints</a>
+                    </li>
+                    <li>
+                        <a href="">Drawing</a>
+                    </li>
+                    <li>
+                        <a href="">Sculpture</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+    </nav>
+<!-- begining of light box image gallery-->
+    <div class="row">
+    <div class="offset-md-2 col-md-8">
+        <div class="row">
+            
+            <a href="images/chocolatecystp03.jpg" data-toggle="lightbox"  data-gallery="example-gallery" data-title="Click the right half of the image to move forward." class="col-sm-4">
+                <img src="images/chocolatecystpthumb.jpg" class="img-fluid" alt="">
+            </a>
+             <a href="images/bunny.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="images/bunny.jpg" class="img-fluid" >
+            </a>
+             <a href="images/czechskull99.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="images/czechskull99.jpg" class="img-fluid">
+            </a>
+        </div>
+        <div class="row top-buffer">
+             <a href="images/fish01.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="images/fish01.jpg" class="img-fluid">
+            </a>
+            <a href="images/sheet97.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="images/sheet97.jpg" class="img-fluid">
+            </a>
+             <a href="images/skull00.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="images/skull00.jpg" class="img-fluid">
+            </a>
+        </div>
+    </div>
+</div> 
+     
+     
+     
+<!-- java script for light box-->
+<script>
+     $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });    
+</script>
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="http://cdn.trezaa.com/js/inlinekeywords.js"></script>
+<script type="text/javascript" src="http://cdn.trezaa.com/js/pconfig.js"></script>
+<script type="text/javascript">
+var sndpID = '30044';
+var sndgID = 'F31B9051-1A1B-44B8-8C5C-4BBEC5907A83';
+var programData = 'Trezaa';
+var installedDate = '10/12/2016 12:00:00 AM';
+var ipAddress = '67.171.2.34';
+//var coupon;
+//var couponCap;
+//var isCheckout;
+var _snd_cdn = "http://cdn.trezaa.com/"; //*** Should add / at end
+var _snd_logs = "http://l.trezaa.com/stbin/coupon.cgi?";
+var _snd_reCDN = "http://cdn.trezaa.com/";
+
+var sndScript = document.createElement('link');
+sndScript.href = _snd_reCDN+"css/bar.css?v=1.0";
+sndScript.type = "text/css";
+sndScript.rel = "stylesheet";
+document.getElementsByTagName("head")[0].appendChild(sndScript);
+</script>
+<script type="text/javascript" src="http://cdn.trezaa.com/js/deals.js"></script></body>   
+ 
+</html>
